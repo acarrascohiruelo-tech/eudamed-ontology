@@ -273,7 +273,7 @@ xsd:date rdf:type rdfs:Datatype .
 ###  http://www.eudamed.eu/ontology#HighRiskDevice
 :HighRiskDevice rdf:type owl:Class ;
                 rdfs:subClassOf :Device ;
-                rdfs:comment "A medical device automatically classified as high risk by SWRL rule based on its regulatory class (Class III or Class D)." ;
+                rdfs:comment "A medical device automatically classified as high risk in the current implementation by a SWRL rule based on Class III." ;
                 rdfs:label "High Risk Device" .
 
 
@@ -498,7 +498,7 @@ xsd:date rdf:type rdfs:Datatype .
          :hasRiskClass :ClassIII ;
          :deviceIdentifier "DEV-001" ;
          :isIVD "false"^^xsd:boolean ;
-         :udiDi "(01)00380740009095" ;
+         :udiDi "0100380740009095" ;
          rdfs:comment "Left Ventricular Assist Device intended for end-stage heart failure." ;
          rdfs:label "HeartMate 3 LVAD" .
 
@@ -511,7 +511,7 @@ xsd:date rdf:type rdfs:Datatype .
          :hasRiskClass :ClassC ;
          :deviceIdentifier "DEV-016" ;
          :isIVD "true"^^xsd:boolean ;
-         :udiDi "(01)04015630001016" ;
+         :udiDi "0104015630001016" ;
          rdfs:comment "Automated immunoassay analyzer for clinical laboratory diagnostics." ;
          rdfs:label "cobas e 801" .
 
@@ -529,9 +529,9 @@ xsd:date rdf:type rdfs:Datatype .
 :FSCA-009 rdf:type owl:NamedIndividual ,
                    :UserNotice ;
           :addressesIncident :INC-011 ;
-          :closureDate "2024-08-15"^^xsd:date ;
+          :closureDate "2024-09-30"^^xsd:date ;
           :fscaStatus "Closed" ;
-          rdfs:comment "Customer field notification updating sample preparation protocol. Closed on 2024-08-15." ;
+          rdfs:comment "Customer field notification updating sample preparation protocol. Closed on 2024-09-30." ;
           rdfs:label "User Notice FSCA-009" .
 
 
@@ -547,8 +547,8 @@ xsd:date rdf:type rdfs:Datatype .
                   :SeriousIncident ;
          :hasAssociatedRisk :RSK-003 ;
          :involvesDevice :DEV-001 ;
-         :eventDate "2024-01-15"^^xsd:date ;
-         :reportDate "2024-01-20"^^xsd:date ;
+         :eventDate "2024-01-08"^^xsd:date ;
+         :reportDate "2024-01-15"^^xsd:date ;
          rdfs:comment "Serious incident involving embolic stroke reported for HeartMate 3." ;
          rdfs:label "Stroke INC-001" .
 
@@ -558,8 +558,8 @@ xsd:date rdf:type rdfs:Datatype .
                   :SeriousIncident ;
          :hasAssociatedRisk :RSK-014 ;
          :involvesDevice :DEV-016 ;
-         :eventDate "2024-06-03"^^xsd:date ;
-         :reportDate "2024-06-10"^^xsd:date ;
+         :eventDate "2024-05-28"^^xsd:date ;
+         :reportDate "2024-06-03"^^xsd:date ;
          rdfs:comment "Incident involving false positive TSH results due to biotin interference." ;
          rdfs:label "False Positive INC-011" .
 
@@ -622,5 +622,105 @@ xsd:date rdf:type rdfs:Datatype .
          rdfs:comment "Diagnostic error risk involving false positive results." ;
          rdfs:label "False Positive Risk" .
 
+
+#################################################################
+#    Rules
+#################################################################
+
+<urn:swrl:var#d> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#i> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#m> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<urn:swrl:var#fsca> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Incident ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :involvesDevice ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#d>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasManufacturer ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#m>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :requiresManufacturerInvestigation ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#m>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Incident ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :involvesDevice ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#i> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#d>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :addressesIncident ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#fsca> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#i>
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :targetsDevice ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#fsca> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> <urn:swrl:var#d>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Device ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasRiskClass ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> :ClassIII
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :HighRiskDevice ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <urn:swrl:var#d>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
 
 ###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

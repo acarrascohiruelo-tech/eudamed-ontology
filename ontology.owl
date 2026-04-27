@@ -7,6 +7,8 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:ontology="http://www.eudamed.eu/ontology#">
     <owl:Ontology rdf:about="http://www.eudamed.eu/ontology">
@@ -440,7 +442,7 @@
 
     <owl:Class rdf:about="http://www.eudamed.eu/ontology#HighRiskDevice">
         <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Device"/>
-        <rdfs:comment>A medical device automatically classified as high risk by SWRL rule based on its regulatory class (Class III or Class D).</rdfs:comment>
+        <rdfs:comment>A medical device automatically classified as high risk in the current implementation by a SWRL rule based on Class III.</rdfs:comment>
         <rdfs:label>High Risk Device</rdfs:label>
     </owl:Class>
     
@@ -817,7 +819,7 @@
         <hasRiskClass rdf:resource="http://www.eudamed.eu/ontology#ClassIII"/>
         <deviceIdentifier>DEV-001</deviceIdentifier>
         <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
-        <udiDi>(01)00380740009095</udiDi>
+        <udiDi>0100380740009095</udiDi>
         <rdfs:comment>Left Ventricular Assist Device intended for end-stage heart failure.</rdfs:comment>
         <rdfs:label>HeartMate 3 LVAD</rdfs:label>
     </owl:NamedIndividual>
@@ -834,7 +836,7 @@
         <hasRiskClass rdf:resource="http://www.eudamed.eu/ontology#ClassC"/>
         <deviceIdentifier>DEV-016</deviceIdentifier>
         <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isIVD>
-        <udiDi>(01)04015630001016</udiDi>
+        <udiDi>0104015630001016</udiDi>
         <rdfs:comment>Automated immunoassay analyzer for clinical laboratory diagnostics.</rdfs:comment>
         <rdfs:label>cobas e 801</rdfs:label>
     </owl:NamedIndividual>
@@ -860,9 +862,9 @@
     <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#FSCA-009">
         <rdf:type rdf:resource="http://www.eudamed.eu/ontology#UserNotice"/>
         <addressesIncident rdf:resource="http://www.eudamed.eu/ontology#INC-011"/>
-        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-15</closureDate>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-09-30</closureDate>
         <fscaStatus>Closed</fscaStatus>
-        <rdfs:comment>Customer field notification updating sample preparation protocol. Closed on 2024-08-15.</rdfs:comment>
+        <rdfs:comment>Customer field notification updating sample preparation protocol. Closed on 2024-09-30.</rdfs:comment>
         <rdfs:label>User Notice FSCA-009</rdfs:label>
     </owl:NamedIndividual>
     
@@ -886,8 +888,8 @@
         <rdf:type rdf:resource="http://www.eudamed.eu/ontology#SeriousIncident"/>
         <hasAssociatedRisk rdf:resource="http://www.eudamed.eu/ontology#RSK-003"/>
         <involvesDevice rdf:resource="http://www.eudamed.eu/ontology#DEV-001"/>
-        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-15</eventDate>
-        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-20</reportDate>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-08</eventDate>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-15</reportDate>
         <rdfs:comment>Serious incident involving embolic stroke reported for HeartMate 3.</rdfs:comment>
         <rdfs:label>Stroke INC-001</rdfs:label>
     </owl:NamedIndividual>
@@ -901,8 +903,8 @@
         <rdf:type rdf:resource="http://www.eudamed.eu/ontology#SeriousIncident"/>
         <hasAssociatedRisk rdf:resource="http://www.eudamed.eu/ontology#RSK-014"/>
         <involvesDevice rdf:resource="http://www.eudamed.eu/ontology#DEV-016"/>
-        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-03</eventDate>
-        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-10</reportDate>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-05-28</eventDate>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-03</reportDate>
         <rdfs:comment>Incident involving false positive TSH results due to biotin interference.</rdfs:comment>
         <rdfs:label>False Positive INC-011</rdfs:label>
     </owl:NamedIndividual>
@@ -993,6 +995,184 @@
         <rdfs:comment>Diagnostic error risk involving false positive results.</rdfs:comment>
         <rdfs:label>False Positive Risk</rdfs:label>
     </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="urn:swrl:var#d">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#i">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#m">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#fsca">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.eudamed.eu/ontology#Incident"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.eudamed.eu/ontology#involvesDevice"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.eudamed.eu/ontology#hasManufacturer"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#m"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.eudamed.eu/ontology#requiresManufacturerInvestigation"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#m"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.eudamed.eu/ontology#Incident"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.eudamed.eu/ontology#involvesDevice"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#i"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.eudamed.eu/ontology#addressesIncident"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#fsca"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#i"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.eudamed.eu/ontology#targetsDevice"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#fsca"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.eudamed.eu/ontology#hasRiskClass"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                                <swrl:argument2 rdf:resource="http://www.eudamed.eu/ontology#ClassIII"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.eudamed.eu/ontology#HighRiskDevice"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#d"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
 </rdf:RDF>
 
 
