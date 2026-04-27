@@ -1,0 +1,573 @@
+<http://www.eudamed.eu/ontology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.eudamed.eu/ontology> <http://purl.org/dc/terms/creator> "Antonio Carrasco Hiruelo" .
+<http://www.eudamed.eu/ontology> <http://www.w3.org/2000/01/rdf-schema#comment> "A comprehensive ontology representing high-risk medical devices, their manufacturers, associated risks, incident reports, and field safety corrective actions (FSCAs), based on the European MDR and IVDR regulatory frameworks." .
+<http://www.eudamed.eu/ontology> <http://www.w3.org/2000/01/rdf-schema#label> "EUDAMED Medical Devices Ontology" .
+<http://www.eudamed.eu/ontology> <http://www.w3.org/2002/07/owl#versionInfo> "1.0" .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Datatypes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/2001/XMLSchema#date
+<http://www.w3.org/2001/XMLSchema#date> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Datatype> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.eudamed.eu/ontology#addressesIncident
+<http://www.eudamed.eu/ontology#addressesIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.eudamed.eu/ontology#addressesIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#addressesIncident> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#FSCA> .
+<http://www.eudamed.eu/ontology#addressesIncident> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.eudamed.eu/ontology#Incident> .
+<http://www.eudamed.eu/ontology#addressesIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Field Safety Corrective Action (FSCA) to the underlying incident it aims to resolve." .
+<http://www.eudamed.eu/ontology#addressesIncident> <http://www.w3.org/2000/01/rdf-schema#label> "addresses incident" .
+# 
+# http://www.eudamed.eu/ontology#compliesWith
+<http://www.eudamed.eu/ontology#compliesWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.eudamed.eu/ontology#compliesWith> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#compliesWith> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#compliesWith> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.eudamed.eu/ontology#Regulation> .
+<http://www.eudamed.eu/ontology#compliesWith> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the regulatory framework (MDR or IVDR) the device complies with." .
+<http://www.eudamed.eu/ontology#compliesWith> <http://www.w3.org/2000/01/rdf-schema#label> "complies with" .
+# 
+# http://www.eudamed.eu/ontology#hasAssociatedRisk
+<http://www.eudamed.eu/ontology#hasAssociatedRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.eudamed.eu/ontology#hasAssociatedRisk> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Incident> .
+<http://www.eudamed.eu/ontology#hasAssociatedRisk> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.eudamed.eu/ontology#Risk> .
+<http://www.eudamed.eu/ontology#hasAssociatedRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a reported incident to the specific risk category or hazard that caused it." .
+<http://www.eudamed.eu/ontology#hasAssociatedRisk> <http://www.w3.org/2000/01/rdf-schema#label> "has associated risk" .
+# 
+# http://www.eudamed.eu/ontology#hasManufacturer
+<http://www.eudamed.eu/ontology#hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.eudamed.eu/ontology#hasManufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.eudamed.eu/ontology#Manufacturer> .
+<http://www.eudamed.eu/ontology#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a medical device to its unique manufacturer responsible for its regulatory compliance." .
+<http://www.eudamed.eu/ontology#hasManufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "has manufacturer" .
+# 
+# http://www.eudamed.eu/ontology#hasRiskClass
+<http://www.eudamed.eu/ontology#hasRiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.eudamed.eu/ontology#hasRiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.eudamed.eu/ontology#RiskClass> .
+<http://www.eudamed.eu/ontology#hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a medical device to its assigned regulatory risk class under MDR or IVDR." .
+<http://www.eudamed.eu/ontology#hasRiskClass> <http://www.w3.org/2000/01/rdf-schema#label> "has risk class" .
+# 
+# http://www.eudamed.eu/ontology#involvesDevice
+<http://www.eudamed.eu/ontology#involvesDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.eudamed.eu/ontology#involvesDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#involvesDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Incident> .
+<http://www.eudamed.eu/ontology#involvesDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#involvesDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an adverse incident report to the specific medical device involved in the event." .
+<http://www.eudamed.eu/ontology#involvesDevice> <http://www.w3.org/2000/01/rdf-schema#label> "involves device" .
+# 
+# http://www.eudamed.eu/ontology#locatedIn
+<http://www.eudamed.eu/ontology#locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.eudamed.eu/ontology#locatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Manufacturer> .
+<http://www.eudamed.eu/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.eudamed.eu/ontology#Country> .
+<http://www.eudamed.eu/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the geographical country where the manufacturer's headquarters is located." .
+<http://www.eudamed.eu/ontology#locatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "located in" .
+# 
+# http://www.eudamed.eu/ontology#requiresManufacturerInvestigation
+<http://www.eudamed.eu/ontology#requiresManufacturerInvestigation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.eudamed.eu/ontology#requiresManufacturerInvestigation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Incident> .
+<http://www.eudamed.eu/ontology#requiresManufacturerInvestigation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.eudamed.eu/ontology#Manufacturer> .
+<http://www.eudamed.eu/ontology#requiresManufacturerInvestigation> <http://www.w3.org/2000/01/rdf-schema#comment> "An inferred relationship indicating that a specific manufacturer must investigate the linked incident. Populated by SWRL rule." .
+<http://www.eudamed.eu/ontology#requiresManufacturerInvestigation> <http://www.w3.org/2000/01/rdf-schema#label> "requires manufacturer investigation" .
+# 
+# http://www.eudamed.eu/ontology#targetsDevice
+<http://www.eudamed.eu/ontology#targetsDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.eudamed.eu/ontology#targetsDevice> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#FSCA> .
+<http://www.eudamed.eu/ontology#targetsDevice> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#targetsDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "An inferred relationship connecting a Field Safety Corrective Action directly to the targeted medical device. Populated by SWRL rule." .
+<http://www.eudamed.eu/ontology#targetsDevice> <http://www.w3.org/2000/01/rdf-schema#label> "targets device" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# http://www.eudamed.eu/ontology#authorizationNumber
+<http://www.eudamed.eu/ontology#authorizationNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.eudamed.eu/ontology#authorizationNumber> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#authorizationNumber> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Manufacturer> .
+<http://www.eudamed.eu/ontology#authorizationNumber> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.eudamed.eu/ontology#authorizationNumber> <http://www.w3.org/2000/01/rdf-schema#comment> "EU regulatory authorization number issued to the manufacturer." .
+<http://www.eudamed.eu/ontology#authorizationNumber> <http://www.w3.org/2000/01/rdf-schema#label> "authorization number" .
+# 
+# http://www.eudamed.eu/ontology#closureDate
+<http://www.eudamed.eu/ontology#closureDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.eudamed.eu/ontology#closureDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#closureDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#FSCA> .
+<http://www.eudamed.eu/ontology#closureDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.eudamed.eu/ontology#closureDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The date when the corrective action was officially closed. Optional: absent for open FSCAs." .
+<http://www.eudamed.eu/ontology#closureDate> <http://www.w3.org/2000/01/rdf-schema#label> "closure date" .
+# 
+# http://www.eudamed.eu/ontology#contactEmail
+<http://www.eudamed.eu/ontology#contactEmail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.eudamed.eu/ontology#contactEmail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#contactEmail> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Manufacturer> .
+<http://www.eudamed.eu/ontology#contactEmail> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.eudamed.eu/ontology#contactEmail> <http://www.w3.org/2000/01/rdf-schema#comment> "Official email address for regulatory communications with the manufacturer." .
+<http://www.eudamed.eu/ontology#contactEmail> <http://www.w3.org/2000/01/rdf-schema#label> "contact email" .
+# 
+# http://www.eudamed.eu/ontology#deviceIdentifier
+<http://www.eudamed.eu/ontology#deviceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.eudamed.eu/ontology#deviceIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#deviceIdentifier> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#deviceIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.eudamed.eu/ontology#deviceIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "The unique internal alphanumeric identifier assigned to the medical device (e.g. DEV-001)." .
+<http://www.eudamed.eu/ontology#deviceIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "device identifier" .
+# 
+# http://www.eudamed.eu/ontology#eventDate
+<http://www.eudamed.eu/ontology#eventDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.eudamed.eu/ontology#eventDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#eventDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Incident> .
+<http://www.eudamed.eu/ontology#eventDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.eudamed.eu/ontology#eventDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The calendar date when the adverse incident actually occurred." .
+<http://www.eudamed.eu/ontology#eventDate> <http://www.w3.org/2000/01/rdf-schema#label> "event date" .
+# 
+# http://www.eudamed.eu/ontology#fscaStatus
+<http://www.eudamed.eu/ontology#fscaStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.eudamed.eu/ontology#fscaStatus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#fscaStatus> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#FSCA> .
+<http://www.eudamed.eu/ontology#fscaStatus> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.eudamed.eu/ontology#fscaStatus> <http://www.w3.org/2000/01/rdf-schema#comment> "The current operational status of the Field Safety Corrective Action: Open or Closed." .
+<http://www.eudamed.eu/ontology#fscaStatus> <http://www.w3.org/2000/01/rdf-schema#label> "FSCA status" .
+# 
+# http://www.eudamed.eu/ontology#isIVD
+<http://www.eudamed.eu/ontology#isIVD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.eudamed.eu/ontology#isIVD> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#isIVD> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#isIVD> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.eudamed.eu/ontology#isIVD> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean flag indicating whether the medical device is an In Vitro Diagnostic (IVD) device." .
+<http://www.eudamed.eu/ontology#isIVD> <http://www.w3.org/2000/01/rdf-schema#label> "is IVD" .
+# 
+# http://www.eudamed.eu/ontology#reportDate
+<http://www.eudamed.eu/ontology#reportDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.eudamed.eu/ontology#reportDate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#reportDate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Incident> .
+<http://www.eudamed.eu/ontology#reportDate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#date> .
+<http://www.eudamed.eu/ontology#reportDate> <http://www.w3.org/2000/01/rdf-schema#comment> "The calendar date when the incident was officially reported to authorities." .
+<http://www.eudamed.eu/ontology#reportDate> <http://www.w3.org/2000/01/rdf-schema#label> "report date" .
+# 
+# http://www.eudamed.eu/ontology#severity
+<http://www.eudamed.eu/ontology#severity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.eudamed.eu/ontology#severity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#severity> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Risk> .
+<http://www.eudamed.eu/ontology#severity> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.eudamed.eu/ontology#severity> <http://www.w3.org/2000/01/rdf-schema#comment> "The severity level of the associated risk: Critical, Serious, or Moderate." .
+<http://www.eudamed.eu/ontology#severity> <http://www.w3.org/2000/01/rdf-schema#label> "severity" .
+# 
+# http://www.eudamed.eu/ontology#udiDi
+<http://www.eudamed.eu/ontology#udiDi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.eudamed.eu/ontology#udiDi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<http://www.eudamed.eu/ontology#udiDi> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#udiDi> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.eudamed.eu/ontology#udiDi> <http://www.w3.org/2000/01/rdf-schema#comment> "The Unique Device Identification - Device Identifier, a globally unique code for the device model." .
+<http://www.eudamed.eu/ontology#udiDi> <http://www.w3.org/2000/01/rdf-schema#label> "UDI-DI" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.eudamed.eu/ontology#ActiveDevice
+<http://www.eudamed.eu/ontology#ActiveDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A medical device relying on an electrical or other power source." .
+<http://www.eudamed.eu/ontology#ActiveDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Active Device" .
+# 
+# http://www.eudamed.eu/ontology#ActiveImplant
+<http://www.eudamed.eu/ontology#ActiveImplant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#ActiveImplant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#ImplantableActiveDevice> .
+<http://www.eudamed.eu/ontology#ActiveImplant> <http://www.w3.org/2000/01/rdf-schema#comment> "A highly specific category of active implantable medical devices." .
+<http://www.eudamed.eu/ontology#ActiveImplant> <http://www.w3.org/2000/01/rdf-schema#label> "Active Implant" .
+# 
+# http://www.eudamed.eu/ontology#ContaminationRisk
+<http://www.eudamed.eu/ontology#ContaminationRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#ContaminationRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Risk> .
+<http://www.eudamed.eu/ontology#ContaminationRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk related to chemical or biological contamination of reagents or components." .
+<http://www.eudamed.eu/ontology#ContaminationRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Contamination Risk" .
+# 
+# http://www.eudamed.eu/ontology#Country
+<http://www.eudamed.eu/ontology#Country> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#comment> "A geographical country entity representing a sovereign state." .
+<http://www.eudamed.eu/ontology#Country> <http://www.w3.org/2000/01/rdf-schema#label> "Country" .
+# 
+# http://www.eudamed.eu/ontology#CybersecurityRisk
+<http://www.eudamed.eu/ontology#CybersecurityRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#CybersecurityRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Risk> .
+<http://www.eudamed.eu/ontology#CybersecurityRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk related to IT vulnerabilities and unauthorized access to device systems." .
+<http://www.eudamed.eu/ontology#CybersecurityRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Cybersecurity Risk" .
+# 
+# http://www.eudamed.eu/ontology#Device
+<http://www.eudamed.eu/ontology#Device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#Device> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/2002/07/owl#onClass> <http://www.eudamed.eu/ontology#Manufacturer> .
+_:genid1 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <http://www.eudamed.eu/ontology#hasManufacturer> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.eudamed.eu/ontology#Device> <http://www.w3.org/2000/01/rdf-schema#comment> "A generic medical device regulated under European MDR or IVDR frameworks." .
+<http://www.eudamed.eu/ontology#Device> <http://www.w3.org/2000/01/rdf-schema#label> "Device" .
+# 
+# http://www.eudamed.eu/ontology#DiagnosticRisk
+<http://www.eudamed.eu/ontology#DiagnosticRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#DiagnosticRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Risk> .
+<http://www.eudamed.eu/ontology#DiagnosticRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk of clinical diagnostic errors, such as false positives or false negatives." .
+<http://www.eudamed.eu/ontology#DiagnosticRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Diagnostic Risk" .
+# 
+# http://www.eudamed.eu/ontology#FSCA
+<http://www.eudamed.eu/ontology#FSCA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#FSCA> <http://www.w3.org/2000/01/rdf-schema#comment> "A Field Safety Corrective Action taken by a manufacturer to reduce health risks." .
+<http://www.eudamed.eu/ontology#FSCA> <http://www.w3.org/2000/01/rdf-schema#label> "FSCA" .
+# 
+# http://www.eudamed.eu/ontology#HighRiskDevice
+<http://www.eudamed.eu/ontology#HighRiskDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A medical device automatically classified as high risk by SWRL rule based on its regulatory class (Class III or Class D)." .
+<http://www.eudamed.eu/ontology#HighRiskDevice> <http://www.w3.org/2000/01/rdf-schema#label> "High Risk Device" .
+# 
+# http://www.eudamed.eu/ontology#ImplantableActiveDevice
+<http://www.eudamed.eu/ontology#ImplantableActiveDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#ImplantableActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#ActiveDevice> .
+<http://www.eudamed.eu/ontology#ImplantableActiveDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#ImplantableDevice> .
+<http://www.eudamed.eu/ontology#ImplantableActiveDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "An active medical device that is also intended to be implanted." .
+<http://www.eudamed.eu/ontology#ImplantableActiveDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Implantable Active Device" .
+# 
+# http://www.eudamed.eu/ontology#ImplantableDevice
+<http://www.eudamed.eu/ontology#ImplantableDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A medical device intended to be totally introduced into the human body." .
+<http://www.eudamed.eu/ontology#ImplantableDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Implantable Device" .
+# 
+# http://www.eudamed.eu/ontology#InSituCorrection
+<http://www.eudamed.eu/ontology#InSituCorrection> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#InSituCorrection> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#FSCA> .
+<http://www.eudamed.eu/ontology#InSituCorrection> <http://www.w3.org/2000/01/rdf-schema#comment> "A corrective action involving the modification of a device directly in the field." .
+<http://www.eudamed.eu/ontology#InSituCorrection> <http://www.w3.org/2000/01/rdf-schema#label> "In Situ Correction" .
+# 
+# http://www.eudamed.eu/ontology#InVitroDiagnosticDevice
+<http://www.eudamed.eu/ontology#InVitroDiagnosticDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A medical device intended for in vitro diagnostic purposes (IVDR framework)." .
+<http://www.eudamed.eu/ontology#InVitroDiagnosticDevice> <http://www.w3.org/2000/01/rdf-schema#label> "IVD Device" .
+# 
+# http://www.eudamed.eu/ontology#Incident
+<http://www.eudamed.eu/ontology#Incident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#Incident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/2002/07/owl#onClass> <http://www.eudamed.eu/ontology#Device> .
+_:genid2 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://www.eudamed.eu/ontology#involvesDevice> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.eudamed.eu/ontology#Incident> <http://www.w3.org/2000/01/rdf-schema#comment> "An adverse event or incident involving a registered medical device." .
+<http://www.eudamed.eu/ontology#Incident> <http://www.w3.org/2000/01/rdf-schema#label> "Incident" .
+# 
+# http://www.eudamed.eu/ontology#InfectionRisk
+<http://www.eudamed.eu/ontology#InfectionRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#InfectionRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Risk> .
+<http://www.eudamed.eu/ontology#InfectionRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk related to biological contamination or device-related infections." .
+<http://www.eudamed.eu/ontology#InfectionRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Infection Risk" .
+# 
+# http://www.eudamed.eu/ontology#InjuryRisk
+<http://www.eudamed.eu/ontology#InjuryRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#InjuryRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Risk> .
+<http://www.eudamed.eu/ontology#InjuryRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk category related to physical harm or injury caused directly to the patient." .
+<http://www.eudamed.eu/ontology#InjuryRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Injury Risk" .
+# 
+# http://www.eudamed.eu/ontology#InterferenceRisk
+<http://www.eudamed.eu/ontology#InterferenceRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#InterferenceRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Risk> .
+<http://www.eudamed.eu/ontology#InterferenceRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk of electromagnetic or other types of external interference." .
+<http://www.eudamed.eu/ontology#InterferenceRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Interference Risk" .
+# 
+# http://www.eudamed.eu/ontology#MalfunctionRisk
+<http://www.eudamed.eu/ontology#MalfunctionRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#MalfunctionRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Risk> .
+<http://www.eudamed.eu/ontology#MalfunctionRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk category related to device malfunction, including electrical and mechanical failures." .
+<http://www.eudamed.eu/ontology#MalfunctionRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Malfunction Risk" .
+# 
+# http://www.eudamed.eu/ontology#Manufacturer
+<http://www.eudamed.eu/ontology#Manufacturer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#comment> "The legal entity responsible for the design, manufacture, and regulatory compliance of the device." .
+<http://www.eudamed.eu/ontology#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#label> "Manufacturer" .
+<http://www.eudamed.eu/ontology#Manufacturer> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://schema.org/Organization> .
+# 
+# http://www.eudamed.eu/ontology#MaterialRisk
+<http://www.eudamed.eu/ontology#MaterialRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#MaterialRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Risk> .
+<http://www.eudamed.eu/ontology#MaterialRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk related to material degradation, wear debris, or corrosion." .
+<http://www.eudamed.eu/ontology#MaterialRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Material Risk" .
+# 
+# http://www.eudamed.eu/ontology#NearMissIncident
+<http://www.eudamed.eu/ontology#NearMissIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#NearMissIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Incident> .
+<http://www.eudamed.eu/ontology#NearMissIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "A potential incident that could have caused harm but was averted." .
+<http://www.eudamed.eu/ontology#NearMissIncident> <http://www.w3.org/2000/01/rdf-schema#label> "Near Miss" .
+# 
+# http://www.eudamed.eu/ontology#RadiationRisk
+<http://www.eudamed.eu/ontology#RadiationRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#RadiationRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Risk> .
+<http://www.eudamed.eu/ontology#RadiationRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk associated with unintended ionising radiation exposure." .
+<http://www.eudamed.eu/ontology#RadiationRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Radiation Risk" .
+# 
+# http://www.eudamed.eu/ontology#Recall
+<http://www.eudamed.eu/ontology#Recall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#Recall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#FSCA> .
+<http://www.eudamed.eu/ontology#Recall> <http://www.w3.org/2000/01/rdf-schema#comment> "Action to remove a defective medical device from the market." .
+<http://www.eudamed.eu/ontology#Recall> <http://www.w3.org/2000/01/rdf-schema#label> "Recall" .
+# 
+# http://www.eudamed.eu/ontology#Regulation
+<http://www.eudamed.eu/ontology#Regulation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#Regulation> <http://www.w3.org/2000/01/rdf-schema#comment> "The overarching European regulatory framework governing the medical device." .
+<http://www.eudamed.eu/ontology#Regulation> <http://www.w3.org/2000/01/rdf-schema#label> "Regulation" .
+# 
+# http://www.eudamed.eu/ontology#Risk
+<http://www.eudamed.eu/ontology#Risk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#Risk> <http://www.w3.org/2000/01/rdf-schema#comment> "A potential hazard or risk associated with the use of a medical device." .
+<http://www.eudamed.eu/ontology#Risk> <http://www.w3.org/2000/01/rdf-schema#label> "Risk" .
+# 
+# http://www.eudamed.eu/ontology#RiskClass
+<http://www.eudamed.eu/ontology#RiskClass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#RiskClass> <http://www.w3.org/2000/01/rdf-schema#comment> "The regulatory risk classification assigned to a medical device under MDR (I, IIa, IIb, III) or IVDR (A, B, C, D)." .
+<http://www.eudamed.eu/ontology#RiskClass> <http://www.w3.org/2000/01/rdf-schema#label> "Risk Class" .
+# 
+# http://www.eudamed.eu/ontology#SafetyAlert
+<http://www.eudamed.eu/ontology#SafetyAlert> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#SafetyAlert> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#FSCA> .
+<http://www.eudamed.eu/ontology#SafetyAlert> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal communication regarding the safe use of a medical device." .
+<http://www.eudamed.eu/ontology#SafetyAlert> <http://www.w3.org/2000/01/rdf-schema#label> "Safety Alert" .
+# 
+# http://www.eudamed.eu/ontology#SelfTestDevice
+<http://www.eudamed.eu/ontology#SelfTestDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#SelfTestDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#SelfTestDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A device intended by the manufacturer to be used by lay persons." .
+<http://www.eudamed.eu/ontology#SelfTestDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Self Test Device" .
+# 
+# http://www.eudamed.eu/ontology#SeriousIncident
+<http://www.eudamed.eu/ontology#SeriousIncident> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Incident> .
+<http://www.eudamed.eu/ontology#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.eudamed.eu/ontology#Risk> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://www.eudamed.eu/ontology#hasAssociatedRisk> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<http://www.eudamed.eu/ontology#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#comment> "An incident leading to death or serious deterioration of a patient's health. Must have at least one associated risk." .
+<http://www.eudamed.eu/ontology#SeriousIncident> <http://www.w3.org/2000/01/rdf-schema#label> "Serious Incident" .
+# 
+# http://www.eudamed.eu/ontology#SingleUseDevice
+<http://www.eudamed.eu/ontology#SingleUseDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#SingleUseDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Device> .
+<http://www.eudamed.eu/ontology#SingleUseDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A medical device intended to be used on one individual during a single procedure." .
+<http://www.eudamed.eu/ontology#SingleUseDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Single Use Device" .
+# 
+# http://www.eudamed.eu/ontology#SoftwareRisk
+<http://www.eudamed.eu/ontology#SoftwareRisk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#SoftwareRisk> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#Risk> .
+<http://www.eudamed.eu/ontology#SoftwareRisk> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk arising from software bugs or faulty logic implementation." .
+<http://www.eudamed.eu/ontology#SoftwareRisk> <http://www.w3.org/2000/01/rdf-schema#label> "Software Risk" .
+# 
+# http://www.eudamed.eu/ontology#UserNotice
+<http://www.eudamed.eu/ontology#UserNotice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.eudamed.eu/ontology#UserNotice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.eudamed.eu/ontology#FSCA> .
+<http://www.eudamed.eu/ontology#UserNotice> <http://www.w3.org/2000/01/rdf-schema#comment> "An official notice updating instructions for use or guidelines." .
+<http://www.eudamed.eu/ontology#UserNotice> <http://www.w3.org/2000/01/rdf-schema#label> "User Notice" .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# http://dbpedia.org/resource/Germany
+<http://dbpedia.org/resource/Germany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Germany> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eudamed.eu/ontology#Germany> .
+# 
+# http://www.eudamed.eu/ontology#Germany
+# 
+# http://dbpedia.org/resource/Medtronic
+<http://dbpedia.org/resource/Medtronic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Medtronic> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eudamed.eu/ontology#MAN-001> .
+# 
+# http://www.eudamed.eu/ontology#MAN-001
+# 
+# http://dbpedia.org/resource/Republic_of_Ireland
+<http://dbpedia.org/resource/Republic_of_Ireland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Republic_of_Ireland> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eudamed.eu/ontology#Ireland> .
+# 
+# http://www.eudamed.eu/ontology#Ireland
+# 
+# http://dbpedia.org/resource/Roche
+<http://dbpedia.org/resource/Roche> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://dbpedia.org/resource/Roche> <http://www.w3.org/2002/07/owl#sameAs> <http://www.eudamed.eu/ontology#MAN-005> .
+# 
+# http://www.eudamed.eu/ontology#MAN-005
+# 
+# http://www.eudamed.eu/ontology#ClassC
+<http://www.eudamed.eu/ontology#ClassC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#ClassC> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#RiskClass> .
+<http://www.eudamed.eu/ontology#ClassC> <http://www.w3.org/2000/01/rdf-schema#comment> "A high regulatory risk class under the IVDR framework." .
+<http://www.eudamed.eu/ontology#ClassC> <http://www.w3.org/2000/01/rdf-schema#label> "Class C" .
+# 
+# http://www.eudamed.eu/ontology#ClassIII
+<http://www.eudamed.eu/ontology#ClassIII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#ClassIII> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#RiskClass> .
+<http://www.eudamed.eu/ontology#ClassIII> <http://www.w3.org/2000/01/rdf-schema#comment> "The highest regulatory risk class under the MDR framework." .
+<http://www.eudamed.eu/ontology#ClassIII> <http://www.w3.org/2000/01/rdf-schema#label> "Class III" .
+# 
+# http://www.eudamed.eu/ontology#DEV-001
+<http://www.eudamed.eu/ontology#DEV-001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#DEV-001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#ImplantableActiveDevice> .
+<http://www.eudamed.eu/ontology#DEV-001> <http://www.eudamed.eu/ontology#compliesWith> <http://www.eudamed.eu/ontology#MDR> .
+<http://www.eudamed.eu/ontology#DEV-001> <http://www.eudamed.eu/ontology#hasManufacturer> <http://www.eudamed.eu/ontology#MAN-001> .
+<http://www.eudamed.eu/ontology#DEV-001> <http://www.eudamed.eu/ontology#hasRiskClass> <http://www.eudamed.eu/ontology#ClassIII> .
+<http://www.eudamed.eu/ontology#DEV-001> <http://www.eudamed.eu/ontology#deviceIdentifier> "DEV-001" .
+<http://www.eudamed.eu/ontology#DEV-001> <http://www.eudamed.eu/ontology#isIVD> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.eudamed.eu/ontology#DEV-001> <http://www.eudamed.eu/ontology#udiDi> "(01)00380740009095" .
+<http://www.eudamed.eu/ontology#DEV-001> <http://www.w3.org/2000/01/rdf-schema#comment> "Left Ventricular Assist Device intended for end-stage heart failure." .
+<http://www.eudamed.eu/ontology#DEV-001> <http://www.w3.org/2000/01/rdf-schema#label> "HeartMate 3 LVAD" .
+# 
+# http://www.eudamed.eu/ontology#DEV-016
+<http://www.eudamed.eu/ontology#DEV-016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#DEV-016> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#InVitroDiagnosticDevice> .
+<http://www.eudamed.eu/ontology#DEV-016> <http://www.eudamed.eu/ontology#compliesWith> <http://www.eudamed.eu/ontology#IVDR> .
+<http://www.eudamed.eu/ontology#DEV-016> <http://www.eudamed.eu/ontology#hasManufacturer> <http://www.eudamed.eu/ontology#MAN-005> .
+<http://www.eudamed.eu/ontology#DEV-016> <http://www.eudamed.eu/ontology#hasRiskClass> <http://www.eudamed.eu/ontology#ClassC> .
+<http://www.eudamed.eu/ontology#DEV-016> <http://www.eudamed.eu/ontology#deviceIdentifier> "DEV-016" .
+<http://www.eudamed.eu/ontology#DEV-016> <http://www.eudamed.eu/ontology#isIVD> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.eudamed.eu/ontology#DEV-016> <http://www.eudamed.eu/ontology#udiDi> "(01)04015630001016" .
+<http://www.eudamed.eu/ontology#DEV-016> <http://www.w3.org/2000/01/rdf-schema#comment> "Automated immunoassay analyzer for clinical laboratory diagnostics." .
+<http://www.eudamed.eu/ontology#DEV-016> <http://www.w3.org/2000/01/rdf-schema#label> "cobas e 801" .
+# 
+# http://www.eudamed.eu/ontology#FSCA-001
+<http://www.eudamed.eu/ontology#FSCA-001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#FSCA-001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#SafetyAlert> .
+<http://www.eudamed.eu/ontology#FSCA-001> <http://www.eudamed.eu/ontology#addressesIncident> <http://www.eudamed.eu/ontology#INC-001> .
+<http://www.eudamed.eu/ontology#FSCA-001> <http://www.eudamed.eu/ontology#fscaStatus> "Open" .
+<http://www.eudamed.eu/ontology#FSCA-001> <http://www.w3.org/2000/01/rdf-schema#comment> "Safety alert issued regarding anticoagulation protocol update. Status Open: no closure date." .
+<http://www.eudamed.eu/ontology#FSCA-001> <http://www.w3.org/2000/01/rdf-schema#label> "Safety Alert FSCA-001" .
+# 
+# http://www.eudamed.eu/ontology#FSCA-009
+<http://www.eudamed.eu/ontology#FSCA-009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#FSCA-009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#UserNotice> .
+<http://www.eudamed.eu/ontology#FSCA-009> <http://www.eudamed.eu/ontology#addressesIncident> <http://www.eudamed.eu/ontology#INC-011> .
+<http://www.eudamed.eu/ontology#FSCA-009> <http://www.eudamed.eu/ontology#closureDate> "2024-08-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.eudamed.eu/ontology#FSCA-009> <http://www.eudamed.eu/ontology#fscaStatus> "Closed" .
+<http://www.eudamed.eu/ontology#FSCA-009> <http://www.w3.org/2000/01/rdf-schema#comment> "Customer field notification updating sample preparation protocol. Closed on 2024-08-15." .
+<http://www.eudamed.eu/ontology#FSCA-009> <http://www.w3.org/2000/01/rdf-schema#label> "User Notice FSCA-009" .
+# 
+# http://www.eudamed.eu/ontology#Germany
+<http://www.eudamed.eu/ontology#Germany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#Germany> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#Country> .
+<http://www.eudamed.eu/ontology#Germany> <http://www.w3.org/2000/01/rdf-schema#comment> "The Federal Republic of Germany, a European country." .
+<http://www.eudamed.eu/ontology#Germany> <http://www.w3.org/2000/01/rdf-schema#label> "Germany" .
+# 
+# http://www.eudamed.eu/ontology#INC-001
+<http://www.eudamed.eu/ontology#INC-001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#INC-001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#SeriousIncident> .
+<http://www.eudamed.eu/ontology#INC-001> <http://www.eudamed.eu/ontology#hasAssociatedRisk> <http://www.eudamed.eu/ontology#RSK-003> .
+<http://www.eudamed.eu/ontology#INC-001> <http://www.eudamed.eu/ontology#involvesDevice> <http://www.eudamed.eu/ontology#DEV-001> .
+<http://www.eudamed.eu/ontology#INC-001> <http://www.eudamed.eu/ontology#eventDate> "2024-01-15"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.eudamed.eu/ontology#INC-001> <http://www.eudamed.eu/ontology#reportDate> "2024-01-20"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.eudamed.eu/ontology#INC-001> <http://www.w3.org/2000/01/rdf-schema#comment> "Serious incident involving embolic stroke reported for HeartMate 3." .
+<http://www.eudamed.eu/ontology#INC-001> <http://www.w3.org/2000/01/rdf-schema#label> "Stroke INC-001" .
+# 
+# http://www.eudamed.eu/ontology#INC-011
+<http://www.eudamed.eu/ontology#INC-011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#INC-011> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#SeriousIncident> .
+<http://www.eudamed.eu/ontology#INC-011> <http://www.eudamed.eu/ontology#hasAssociatedRisk> <http://www.eudamed.eu/ontology#RSK-014> .
+<http://www.eudamed.eu/ontology#INC-011> <http://www.eudamed.eu/ontology#involvesDevice> <http://www.eudamed.eu/ontology#DEV-016> .
+<http://www.eudamed.eu/ontology#INC-011> <http://www.eudamed.eu/ontology#eventDate> "2024-06-03"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.eudamed.eu/ontology#INC-011> <http://www.eudamed.eu/ontology#reportDate> "2024-06-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.eudamed.eu/ontology#INC-011> <http://www.w3.org/2000/01/rdf-schema#comment> "Incident involving false positive TSH results due to biotin interference." .
+<http://www.eudamed.eu/ontology#INC-011> <http://www.w3.org/2000/01/rdf-schema#label> "False Positive INC-011" .
+# 
+# http://www.eudamed.eu/ontology#IVDR
+<http://www.eudamed.eu/ontology#IVDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#IVDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#Regulation> .
+<http://www.eudamed.eu/ontology#IVDR> <http://www.w3.org/2000/01/rdf-schema#comment> "In Vitro Diagnostic Regulation (EU 2017/746)." .
+<http://www.eudamed.eu/ontology#IVDR> <http://www.w3.org/2000/01/rdf-schema#label> "IVDR" .
+# 
+# http://www.eudamed.eu/ontology#Ireland
+<http://www.eudamed.eu/ontology#Ireland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#Ireland> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#Country> .
+<http://www.eudamed.eu/ontology#Ireland> <http://www.w3.org/2000/01/rdf-schema#comment> "The Republic of Ireland, a European country." .
+<http://www.eudamed.eu/ontology#Ireland> <http://www.w3.org/2000/01/rdf-schema#label> "Ireland" .
+# 
+# http://www.eudamed.eu/ontology#MAN-001
+<http://www.eudamed.eu/ontology#MAN-001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#MAN-001> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#Manufacturer> .
+<http://www.eudamed.eu/ontology#MAN-001> <http://www.eudamed.eu/ontology#locatedIn> <http://www.eudamed.eu/ontology#Ireland> .
+<http://www.eudamed.eu/ontology#MAN-001> <http://www.eudamed.eu/ontology#authorizationNumber> "MAN-IE-2024-0001" .
+<http://www.eudamed.eu/ontology#MAN-001> <http://www.eudamed.eu/ontology#contactEmail> "regulatory@medtronic.com" .
+<http://www.eudamed.eu/ontology#MAN-001> <http://www.w3.org/2000/01/rdf-schema#comment> "Global manufacturer of medical devices headquartered in Ireland." .
+<http://www.eudamed.eu/ontology#MAN-001> <http://www.w3.org/2000/01/rdf-schema#label> "Medtronic plc" .
+<http://www.eudamed.eu/ontology#MAN-001> <http://xmlns.com/foaf/0.1/name> "Medtronic plc" .
+# 
+# http://www.eudamed.eu/ontology#MAN-005
+<http://www.eudamed.eu/ontology#MAN-005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#MAN-005> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#Manufacturer> .
+<http://www.eudamed.eu/ontology#MAN-005> <http://www.eudamed.eu/ontology#locatedIn> <http://www.eudamed.eu/ontology#Germany> .
+<http://www.eudamed.eu/ontology#MAN-005> <http://www.eudamed.eu/ontology#authorizationNumber> "MAN-DE-2024-0005" .
+<http://www.eudamed.eu/ontology#MAN-005> <http://www.eudamed.eu/ontology#contactEmail> "regulatory@roche.com" .
+<http://www.eudamed.eu/ontology#MAN-005> <http://www.w3.org/2000/01/rdf-schema#comment> "Global diagnostics division of Hoffmann-La Roche." .
+<http://www.eudamed.eu/ontology#MAN-005> <http://www.w3.org/2000/01/rdf-schema#label> "Roche Diagnostics" .
+<http://www.eudamed.eu/ontology#MAN-005> <http://xmlns.com/foaf/0.1/name> "Roche Diagnostics GmbH" .
+# 
+# http://www.eudamed.eu/ontology#MDR
+<http://www.eudamed.eu/ontology#MDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#MDR> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#Regulation> .
+<http://www.eudamed.eu/ontology#MDR> <http://www.w3.org/2000/01/rdf-schema#comment> "Medical Device Regulation (EU 2017/745)." .
+<http://www.eudamed.eu/ontology#MDR> <http://www.w3.org/2000/01/rdf-schema#label> "MDR" .
+# 
+# http://www.eudamed.eu/ontology#RSK-003
+<http://www.eudamed.eu/ontology#RSK-003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#RSK-003> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#InjuryRisk> .
+<http://www.eudamed.eu/ontology#RSK-003> <http://www.eudamed.eu/ontology#severity> "Critical" .
+<http://www.eudamed.eu/ontology#RSK-003> <http://www.w3.org/2000/01/rdf-schema#comment> "Risk of thrombus formation on the device surface causing embolic events." .
+<http://www.eudamed.eu/ontology#RSK-003> <http://www.w3.org/2000/01/rdf-schema#label> "Thrombosis Risk" .
+# 
+# http://www.eudamed.eu/ontology#RSK-014
+<http://www.eudamed.eu/ontology#RSK-014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.eudamed.eu/ontology#RSK-014> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.eudamed.eu/ontology#DiagnosticRisk> .
+<http://www.eudamed.eu/ontology#RSK-014> <http://www.eudamed.eu/ontology#severity> "Serious" .
+<http://www.eudamed.eu/ontology#RSK-014> <http://www.w3.org/2000/01/rdf-schema#comment> "Diagnostic error risk involving false positive results." .
+<http://www.eudamed.eu/ontology#RSK-014> <http://www.w3.org/2000/01/rdf-schema#label> "False Positive Risk" .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

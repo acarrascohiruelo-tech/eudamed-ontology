@@ -1,0 +1,1002 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.eudamed.eu/ontology#"
+     xml:base="http://www.eudamed.eu/ontology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:ontology="http://www.eudamed.eu/ontology#">
+    <owl:Ontology rdf:about="http://www.eudamed.eu/ontology">
+        <terms:creator>Antonio Carrasco Hiruelo</terms:creator>
+        <rdfs:comment>A comprehensive ontology representing high-risk medical devices, their manufacturers, associated risks, incident reports, and field safety corrective actions (FSCAs), based on the European MDR and IVDR regulatory frameworks.</rdfs:comment>
+        <rdfs:label>EUDAMED Medical Devices Ontology</rdfs:label>
+        <owl:versionInfo>1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#addressesIncident -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.eudamed.eu/ontology#addressesIncident">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#FSCA"/>
+        <rdfs:range rdf:resource="http://www.eudamed.eu/ontology#Incident"/>
+        <rdfs:comment>Links a Field Safety Corrective Action (FSCA) to the underlying incident it aims to resolve.</rdfs:comment>
+        <rdfs:label>addresses incident</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#compliesWith -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.eudamed.eu/ontology#compliesWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:range rdf:resource="http://www.eudamed.eu/ontology#Regulation"/>
+        <rdfs:comment>Indicates the regulatory framework (MDR or IVDR) the device complies with.</rdfs:comment>
+        <rdfs:label>complies with</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#hasAssociatedRisk -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.eudamed.eu/ontology#hasAssociatedRisk">
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.eudamed.eu/ontology#Risk"/>
+        <rdfs:comment>Links a reported incident to the specific risk category or hazard that caused it.</rdfs:comment>
+        <rdfs:label>has associated risk</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#hasManufacturer -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.eudamed.eu/ontology#hasManufacturer">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:range rdf:resource="http://www.eudamed.eu/ontology#Manufacturer"/>
+        <rdfs:comment>Relates a medical device to its unique manufacturer responsible for its regulatory compliance.</rdfs:comment>
+        <rdfs:label>has manufacturer</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#hasRiskClass -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.eudamed.eu/ontology#hasRiskClass">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:range rdf:resource="http://www.eudamed.eu/ontology#RiskClass"/>
+        <rdfs:comment>Relates a medical device to its assigned regulatory risk class under MDR or IVDR.</rdfs:comment>
+        <rdfs:label>has risk class</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#involvesDevice -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.eudamed.eu/ontology#involvesDevice">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:comment>Links an adverse incident report to the specific medical device involved in the event.</rdfs:comment>
+        <rdfs:label>involves device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#locatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.eudamed.eu/ontology#locatedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.eudamed.eu/ontology#Country"/>
+        <rdfs:comment>Specifies the geographical country where the manufacturer&apos;s headquarters is located.</rdfs:comment>
+        <rdfs:label>located in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#requiresManufacturerInvestigation -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.eudamed.eu/ontology#requiresManufacturerInvestigation">
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.eudamed.eu/ontology#Manufacturer"/>
+        <rdfs:comment>An inferred relationship indicating that a specific manufacturer must investigate the linked incident. Populated by SWRL rule.</rdfs:comment>
+        <rdfs:label>requires manufacturer investigation</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#targetsDevice -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.eudamed.eu/ontology#targetsDevice">
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#FSCA"/>
+        <rdfs:range rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:comment>An inferred relationship connecting a Field Safety Corrective Action directly to the targeted medical device. Populated by SWRL rule.</rdfs:comment>
+        <rdfs:label>targets device</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#authorizationNumber -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.eudamed.eu/ontology#authorizationNumber">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>EU regulatory authorization number issued to the manufacturer.</rdfs:comment>
+        <rdfs:label>authorization number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#closureDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.eudamed.eu/ontology#closureDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#FSCA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>The date when the corrective action was officially closed. Optional: absent for open FSCAs.</rdfs:comment>
+        <rdfs:label>closure date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#contactEmail -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.eudamed.eu/ontology#contactEmail">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Manufacturer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>Official email address for regulatory communications with the manufacturer.</rdfs:comment>
+        <rdfs:label>contact email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#deviceIdentifier -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.eudamed.eu/ontology#deviceIdentifier">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The unique internal alphanumeric identifier assigned to the medical device (e.g. DEV-001).</rdfs:comment>
+        <rdfs:label>device identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#eventDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.eudamed.eu/ontology#eventDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>The calendar date when the adverse incident actually occurred.</rdfs:comment>
+        <rdfs:label>event date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#fscaStatus -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.eudamed.eu/ontology#fscaStatus">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#FSCA"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The current operational status of the Field Safety Corrective Action: Open or Closed.</rdfs:comment>
+        <rdfs:label>FSCA status</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#isIVD -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.eudamed.eu/ontology#isIVD">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+        <rdfs:comment>A boolean flag indicating whether the medical device is an In Vitro Diagnostic (IVD) device.</rdfs:comment>
+        <rdfs:label>is IVD</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#reportDate -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.eudamed.eu/ontology#reportDate">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Incident"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+        <rdfs:comment>The calendar date when the incident was officially reported to authorities.</rdfs:comment>
+        <rdfs:label>report date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#severity -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.eudamed.eu/ontology#severity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Risk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The severity level of the associated risk: Critical, Serious, or Moderate.</rdfs:comment>
+        <rdfs:label>severity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#udiDi -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.eudamed.eu/ontology#udiDi">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>The Unique Device Identification - Device Identifier, a globally unique code for the device model.</rdfs:comment>
+        <rdfs:label>UDI-DI</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#ActiveDevice -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#ActiveDevice">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:comment>A medical device relying on an electrical or other power source.</rdfs:comment>
+        <rdfs:label>Active Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#ActiveImplant -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#ActiveImplant">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#ImplantableActiveDevice"/>
+        <rdfs:comment>A highly specific category of active implantable medical devices.</rdfs:comment>
+        <rdfs:label>Active Implant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#ContaminationRisk -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#ContaminationRisk">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Risk"/>
+        <rdfs:comment>Risk related to chemical or biological contamination of reagents or components.</rdfs:comment>
+        <rdfs:label>Contamination Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#Country -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#Country">
+        <rdfs:comment>A geographical country entity representing a sovereign state.</rdfs:comment>
+        <rdfs:label>Country</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#CybersecurityRisk -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#CybersecurityRisk">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Risk"/>
+        <rdfs:comment>Risk related to IT vulnerabilities and unauthorized access to device systems.</rdfs:comment>
+        <rdfs:label>Cybersecurity Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#Device -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#Device">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.eudamed.eu/ontology#hasManufacturer"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.eudamed.eu/ontology#Manufacturer"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A generic medical device regulated under European MDR or IVDR frameworks.</rdfs:comment>
+        <rdfs:label>Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#DiagnosticRisk -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#DiagnosticRisk">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Risk"/>
+        <rdfs:comment>Risk of clinical diagnostic errors, such as false positives or false negatives.</rdfs:comment>
+        <rdfs:label>Diagnostic Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#FSCA -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#FSCA">
+        <rdfs:comment>A Field Safety Corrective Action taken by a manufacturer to reduce health risks.</rdfs:comment>
+        <rdfs:label>FSCA</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#HighRiskDevice -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#HighRiskDevice">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:comment>A medical device automatically classified as high risk by SWRL rule based on its regulatory class (Class III or Class D).</rdfs:comment>
+        <rdfs:label>High Risk Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#ImplantableActiveDevice -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#ImplantableActiveDevice">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#ActiveDevice"/>
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#ImplantableDevice"/>
+        <rdfs:comment>An active medical device that is also intended to be implanted.</rdfs:comment>
+        <rdfs:label>Implantable Active Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#ImplantableDevice -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#ImplantableDevice">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:comment>A medical device intended to be totally introduced into the human body.</rdfs:comment>
+        <rdfs:label>Implantable Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#InSituCorrection -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#InSituCorrection">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#FSCA"/>
+        <rdfs:comment>A corrective action involving the modification of a device directly in the field.</rdfs:comment>
+        <rdfs:label>In Situ Correction</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#InVitroDiagnosticDevice -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#InVitroDiagnosticDevice">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:comment>A medical device intended for in vitro diagnostic purposes (IVDR framework).</rdfs:comment>
+        <rdfs:label>IVD Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#Incident -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#Incident">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.eudamed.eu/ontology#involvesDevice"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An adverse event or incident involving a registered medical device.</rdfs:comment>
+        <rdfs:label>Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#InfectionRisk -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#InfectionRisk">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Risk"/>
+        <rdfs:comment>Risk related to biological contamination or device-related infections.</rdfs:comment>
+        <rdfs:label>Infection Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#InjuryRisk -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#InjuryRisk">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Risk"/>
+        <rdfs:comment>Risk category related to physical harm or injury caused directly to the patient.</rdfs:comment>
+        <rdfs:label>Injury Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#InterferenceRisk -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#InterferenceRisk">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Risk"/>
+        <rdfs:comment>Risk of electromagnetic or other types of external interference.</rdfs:comment>
+        <rdfs:label>Interference Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#MalfunctionRisk -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#MalfunctionRisk">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Risk"/>
+        <rdfs:comment>Risk category related to device malfunction, including electrical and mechanical failures.</rdfs:comment>
+        <rdfs:label>Malfunction Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#Manufacturer -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#Manufacturer">
+        <rdfs:comment>The legal entity responsible for the design, manufacture, and regulatory compliance of the device.</rdfs:comment>
+        <rdfs:label>Manufacturer</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://schema.org/Organization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#MaterialRisk -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#MaterialRisk">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Risk"/>
+        <rdfs:comment>Risk related to material degradation, wear debris, or corrosion.</rdfs:comment>
+        <rdfs:label>Material Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#NearMissIncident -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#NearMissIncident">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Incident"/>
+        <rdfs:comment>A potential incident that could have caused harm but was averted.</rdfs:comment>
+        <rdfs:label>Near Miss</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#RadiationRisk -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#RadiationRisk">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Risk"/>
+        <rdfs:comment>Risk associated with unintended ionising radiation exposure.</rdfs:comment>
+        <rdfs:label>Radiation Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#Recall -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#Recall">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#FSCA"/>
+        <rdfs:comment>Action to remove a defective medical device from the market.</rdfs:comment>
+        <rdfs:label>Recall</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#Regulation -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#Regulation">
+        <rdfs:comment>The overarching European regulatory framework governing the medical device.</rdfs:comment>
+        <rdfs:label>Regulation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#Risk -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#Risk">
+        <rdfs:comment>A potential hazard or risk associated with the use of a medical device.</rdfs:comment>
+        <rdfs:label>Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#RiskClass -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#RiskClass">
+        <rdfs:comment>The regulatory risk classification assigned to a medical device under MDR (I, IIa, IIb, III) or IVDR (A, B, C, D).</rdfs:comment>
+        <rdfs:label>Risk Class</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#SafetyAlert -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#SafetyAlert">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#FSCA"/>
+        <rdfs:comment>A formal communication regarding the safe use of a medical device.</rdfs:comment>
+        <rdfs:label>Safety Alert</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#SelfTestDevice -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#SelfTestDevice">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:comment>A device intended by the manufacturer to be used by lay persons.</rdfs:comment>
+        <rdfs:label>Self Test Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#SeriousIncident -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#SeriousIncident">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Incident"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.eudamed.eu/ontology#hasAssociatedRisk"/>
+                <owl:someValuesFrom rdf:resource="http://www.eudamed.eu/ontology#Risk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>An incident leading to death or serious deterioration of a patient&apos;s health. Must have at least one associated risk.</rdfs:comment>
+        <rdfs:label>Serious Incident</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#SingleUseDevice -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#SingleUseDevice">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Device"/>
+        <rdfs:comment>A medical device intended to be used on one individual during a single procedure.</rdfs:comment>
+        <rdfs:label>Single Use Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#SoftwareRisk -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#SoftwareRisk">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#Risk"/>
+        <rdfs:comment>Risk arising from software bugs or faulty logic implementation.</rdfs:comment>
+        <rdfs:label>Software Risk</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#UserNotice -->
+
+
+    <owl:Class rdf:about="http://www.eudamed.eu/ontology#UserNotice">
+        <rdfs:subClassOf rdf:resource="http://www.eudamed.eu/ontology#FSCA"/>
+        <rdfs:comment>An official notice updating instructions for use or guidelines.</rdfs:comment>
+        <rdfs:label>User Notice</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://dbpedia.org/resource/Germany -->
+
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Germany">
+        <owl:sameAs rdf:resource="http://www.eudamed.eu/ontology#Germany"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#Germany -->
+
+
+    <rdf:Description rdf:about="http://www.eudamed.eu/ontology#Germany"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Medtronic -->
+
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Medtronic">
+        <owl:sameAs rdf:resource="http://www.eudamed.eu/ontology#MAN-001"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#MAN-001 -->
+
+
+    <rdf:Description rdf:about="http://www.eudamed.eu/ontology#MAN-001"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Republic_of_Ireland -->
+
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Republic_of_Ireland">
+        <owl:sameAs rdf:resource="http://www.eudamed.eu/ontology#Ireland"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#Ireland -->
+
+
+    <rdf:Description rdf:about="http://www.eudamed.eu/ontology#Ireland"/>
+    
+
+
+    <!-- http://dbpedia.org/resource/Roche -->
+
+
+    <owl:NamedIndividual rdf:about="http://dbpedia.org/resource/Roche">
+        <owl:sameAs rdf:resource="http://www.eudamed.eu/ontology#MAN-005"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#MAN-005 -->
+
+
+    <rdf:Description rdf:about="http://www.eudamed.eu/ontology#MAN-005"/>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#ClassC -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#ClassC">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#RiskClass"/>
+        <rdfs:comment>A high regulatory risk class under the IVDR framework.</rdfs:comment>
+        <rdfs:label>Class C</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#ClassIII -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#ClassIII">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#RiskClass"/>
+        <rdfs:comment>The highest regulatory risk class under the MDR framework.</rdfs:comment>
+        <rdfs:label>Class III</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#DEV-001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#DEV-001">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#ImplantableActiveDevice"/>
+        <compliesWith rdf:resource="http://www.eudamed.eu/ontology#MDR"/>
+        <hasManufacturer rdf:resource="http://www.eudamed.eu/ontology#MAN-001"/>
+        <hasRiskClass rdf:resource="http://www.eudamed.eu/ontology#ClassIII"/>
+        <deviceIdentifier>DEV-001</deviceIdentifier>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</isIVD>
+        <udiDi>(01)00380740009095</udiDi>
+        <rdfs:comment>Left Ventricular Assist Device intended for end-stage heart failure.</rdfs:comment>
+        <rdfs:label>HeartMate 3 LVAD</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#DEV-016 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#DEV-016">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#InVitroDiagnosticDevice"/>
+        <compliesWith rdf:resource="http://www.eudamed.eu/ontology#IVDR"/>
+        <hasManufacturer rdf:resource="http://www.eudamed.eu/ontology#MAN-005"/>
+        <hasRiskClass rdf:resource="http://www.eudamed.eu/ontology#ClassC"/>
+        <deviceIdentifier>DEV-016</deviceIdentifier>
+        <isIVD rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</isIVD>
+        <udiDi>(01)04015630001016</udiDi>
+        <rdfs:comment>Automated immunoassay analyzer for clinical laboratory diagnostics.</rdfs:comment>
+        <rdfs:label>cobas e 801</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#FSCA-001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#FSCA-001">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#SafetyAlert"/>
+        <addressesIncident rdf:resource="http://www.eudamed.eu/ontology#INC-001"/>
+        <fscaStatus>Open</fscaStatus>
+        <rdfs:comment>Safety alert issued regarding anticoagulation protocol update. Status Open: no closure date.</rdfs:comment>
+        <rdfs:label>Safety Alert FSCA-001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#FSCA-009 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#FSCA-009">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#UserNotice"/>
+        <addressesIncident rdf:resource="http://www.eudamed.eu/ontology#INC-011"/>
+        <closureDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-08-15</closureDate>
+        <fscaStatus>Closed</fscaStatus>
+        <rdfs:comment>Customer field notification updating sample preparation protocol. Closed on 2024-08-15.</rdfs:comment>
+        <rdfs:label>User Notice FSCA-009</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#Germany -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#Germany">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#Country"/>
+        <rdfs:comment>The Federal Republic of Germany, a European country.</rdfs:comment>
+        <rdfs:label>Germany</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#INC-001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#INC-001">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#SeriousIncident"/>
+        <hasAssociatedRisk rdf:resource="http://www.eudamed.eu/ontology#RSK-003"/>
+        <involvesDevice rdf:resource="http://www.eudamed.eu/ontology#DEV-001"/>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-15</eventDate>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-01-20</reportDate>
+        <rdfs:comment>Serious incident involving embolic stroke reported for HeartMate 3.</rdfs:comment>
+        <rdfs:label>Stroke INC-001</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#INC-011 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#INC-011">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#SeriousIncident"/>
+        <hasAssociatedRisk rdf:resource="http://www.eudamed.eu/ontology#RSK-014"/>
+        <involvesDevice rdf:resource="http://www.eudamed.eu/ontology#DEV-016"/>
+        <eventDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-03</eventDate>
+        <reportDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-06-10</reportDate>
+        <rdfs:comment>Incident involving false positive TSH results due to biotin interference.</rdfs:comment>
+        <rdfs:label>False Positive INC-011</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#IVDR -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#IVDR">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#Regulation"/>
+        <rdfs:comment>In Vitro Diagnostic Regulation (EU 2017/746).</rdfs:comment>
+        <rdfs:label>IVDR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#Ireland -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#Ireland">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#Country"/>
+        <rdfs:comment>The Republic of Ireland, a European country.</rdfs:comment>
+        <rdfs:label>Ireland</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#MAN-001 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#MAN-001">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#Manufacturer"/>
+        <locatedIn rdf:resource="http://www.eudamed.eu/ontology#Ireland"/>
+        <authorizationNumber>MAN-IE-2024-0001</authorizationNumber>
+        <contactEmail>regulatory@medtronic.com</contactEmail>
+        <rdfs:comment>Global manufacturer of medical devices headquartered in Ireland.</rdfs:comment>
+        <rdfs:label>Medtronic plc</rdfs:label>
+        <foaf:name>Medtronic plc</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#MAN-005 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#MAN-005">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#Manufacturer"/>
+        <locatedIn rdf:resource="http://www.eudamed.eu/ontology#Germany"/>
+        <authorizationNumber>MAN-DE-2024-0005</authorizationNumber>
+        <contactEmail>regulatory@roche.com</contactEmail>
+        <rdfs:comment>Global diagnostics division of Hoffmann-La Roche.</rdfs:comment>
+        <rdfs:label>Roche Diagnostics</rdfs:label>
+        <foaf:name>Roche Diagnostics GmbH</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#MDR -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#MDR">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#Regulation"/>
+        <rdfs:comment>Medical Device Regulation (EU 2017/745).</rdfs:comment>
+        <rdfs:label>MDR</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#RSK-003 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#RSK-003">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#InjuryRisk"/>
+        <severity>Critical</severity>
+        <rdfs:comment>Risk of thrombus formation on the device surface causing embolic events.</rdfs:comment>
+        <rdfs:label>Thrombosis Risk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.eudamed.eu/ontology#RSK-014 -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.eudamed.eu/ontology#RSK-014">
+        <rdf:type rdf:resource="http://www.eudamed.eu/ontology#DiagnosticRisk"/>
+        <severity>Serious</severity>
+        <rdfs:comment>Diagnostic error risk involving false positive results.</rdfs:comment>
+        <rdfs:label>False Positive Risk</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

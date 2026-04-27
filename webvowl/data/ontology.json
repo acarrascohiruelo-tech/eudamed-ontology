@@ -1,0 +1,1381 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "undefined" ],
+    "baseIris" : [ "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "http://www.eudamed.eu/ontology" ],
+    "iri" : "http://www.eudamed.eu/ontology",
+    "version" : "1.0",
+    "author" : [ "Antonio Carrasco Hiruelo" ],
+    "labels" : {
+      "undefined" : "EUDAMED Medical Devices Ontology"
+    },
+    "comments" : {
+      "undefined" : "A comprehensive ontology representing high-risk medical devices, their manufacturers, associated risks, incident reports, and field safety corrective actions (FSCAs), based on the European MDR and IVDR regulatory frameworks."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Antonio Carrasco Hiruelo",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "72",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "71",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "77",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.eudamed.eu/ontology#Device",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Device",
+      "undefined" : "Device"
+    },
+    "subClasses" : [ "4", "5", "6", "7", "8", "9" ],
+    "comment" : {
+      "undefined" : "A generic medical device regulated under European MDR or IVDR frameworks."
+    },
+    "id" : "3"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#Country",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Country",
+      "undefined" : "Country"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.eudamed.eu/ontology#Germany",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "The Federal Republic of Germany, a European country."
+      },
+      "labels" : {
+        "IRI-based" : "Germany",
+        "undefined" : "Germany"
+      }
+    }, {
+      "iri" : "http://www.eudamed.eu/ontology#Ireland",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "The Republic of Ireland, a European country."
+      },
+      "labels" : {
+        "IRI-based" : "Ireland",
+        "undefined" : "Ireland"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A geographical country entity representing a sovereign state."
+    },
+    "id" : "10"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#UserNotice",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UserNotice",
+      "undefined" : "User Notice"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.eudamed.eu/ontology#FSCA-009",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "Customer field notification updating sample preparation protocol. Closed on 2024-08-15."
+      },
+      "labels" : {
+        "IRI-based" : "FSCA-009",
+        "undefined" : "User Notice FSCA-009"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "An official notice updating instructions for use or guidelines."
+    },
+    "id" : "11",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#SeriousIncident",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SeriousIncident",
+      "undefined" : "Serious Incident"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.eudamed.eu/ontology#INC-001",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "Serious incident involving embolic stroke reported for HeartMate 3."
+      },
+      "labels" : {
+        "IRI-based" : "INC-001",
+        "undefined" : "Stroke INC-001"
+      }
+    }, {
+      "iri" : "http://www.eudamed.eu/ontology#INC-011",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "Incident involving false positive TSH results due to biotin interference."
+      },
+      "labels" : {
+        "IRI-based" : "INC-011",
+        "undefined" : "False Positive INC-011"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "An incident leading to death or serious deterioration of a patient's health. Must have at least one associated risk."
+    },
+    "id" : "16",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#ActiveImplant",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveImplant",
+      "undefined" : "Active Implant"
+    },
+    "comment" : {
+      "undefined" : "A highly specific category of active implantable medical devices."
+    },
+    "id" : "21",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#Risk",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Risk",
+      "undefined" : "Risk"
+    },
+    "subClasses" : [ "31", "32", "33", "34", "35", "36", "37", "24", "19", "30" ],
+    "comment" : {
+      "undefined" : "A potential hazard or risk associated with the use of a medical device."
+    },
+    "id" : "20"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#SelfTestDevice",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SelfTestDevice",
+      "undefined" : "Self Test Device"
+    },
+    "comment" : {
+      "undefined" : "A device intended by the manufacturer to be used by lay persons."
+    },
+    "id" : "4",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#DiagnosticRisk",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "DiagnosticRisk",
+      "undefined" : "Diagnostic Risk"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.eudamed.eu/ontology#RSK-014",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "Diagnostic error risk involving false positive results."
+      },
+      "labels" : {
+        "IRI-based" : "RSK-014",
+        "undefined" : "False Positive Risk"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Risk of clinical diagnostic errors, such as false positives or false negatives."
+    },
+    "id" : "37",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#ContaminationRisk",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ContaminationRisk",
+      "undefined" : "Contamination Risk"
+    },
+    "comment" : {
+      "undefined" : "Risk related to chemical or biological contamination of reagents or components."
+    },
+    "id" : "32",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#InjuryRisk",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InjuryRisk",
+      "undefined" : "Injury Risk"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.eudamed.eu/ontology#RSK-003",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "Risk of thrombus formation on the device surface causing embolic events."
+      },
+      "labels" : {
+        "IRI-based" : "RSK-003",
+        "undefined" : "Thrombosis Risk"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "Risk category related to physical harm or injury caused directly to the patient."
+    },
+    "id" : "33",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#SafetyAlert",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SafetyAlert",
+      "undefined" : "Safety Alert"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.eudamed.eu/ontology#FSCA-001",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "Safety alert issued regarding anticoagulation protocol update. Status Open: no closure date."
+      },
+      "labels" : {
+        "IRI-based" : "FSCA-001",
+        "undefined" : "Safety Alert FSCA-001"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A formal communication regarding the safe use of a medical device."
+    },
+    "id" : "13",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#HighRiskDevice",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HighRiskDevice",
+      "undefined" : "High Risk Device"
+    },
+    "comment" : {
+      "undefined" : "A medical device automatically classified as high risk by SWRL rule based on its regulatory class (Class III or Class D)."
+    },
+    "id" : "6",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#InVitroDiagnosticDevice",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InVitroDiagnosticDevice",
+      "undefined" : "IVD Device"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.eudamed.eu/ontology#DEV-016",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "Automated immunoassay analyzer for clinical laboratory diagnostics."
+      },
+      "labels" : {
+        "IRI-based" : "DEV-016",
+        "undefined" : "cobas e 801"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "A medical device intended for in vitro diagnostic purposes (IVDR framework)."
+    },
+    "id" : "8",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#InterferenceRisk",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InterferenceRisk",
+      "undefined" : "Interference Risk"
+    },
+    "comment" : {
+      "undefined" : "Risk of electromagnetic or other types of external interference."
+    },
+    "id" : "24",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#NearMissIncident",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NearMissIncident",
+      "undefined" : "Near Miss"
+    },
+    "comment" : {
+      "undefined" : "A potential incident that could have caused harm but was averted."
+    },
+    "id" : "60",
+    "superClasses" : [ "17" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "63",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#MalfunctionRisk",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MalfunctionRisk",
+      "undefined" : "Malfunction Risk"
+    },
+    "comment" : {
+      "undefined" : "Risk category related to device malfunction, including electrical and mechanical failures."
+    },
+    "id" : "19",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "62",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "27",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "52",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "47",
+    "label" : {
+      "IRI-based" : "boolean"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#date",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "72",
+    "label" : {
+      "IRI-based" : "date"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#CybersecurityRisk",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CybersecurityRisk",
+      "undefined" : "Cybersecurity Risk"
+    },
+    "comment" : {
+      "undefined" : "Risk related to IT vulnerabilities and unauthorized access to device systems."
+    },
+    "id" : "31",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#SingleUseDevice",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SingleUseDevice",
+      "undefined" : "Single Use Device"
+    },
+    "comment" : {
+      "undefined" : "A medical device intended to be used on one individual during a single procedure."
+    },
+    "id" : "7",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "45",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#Recall",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Recall",
+      "undefined" : "Recall"
+    },
+    "comment" : {
+      "undefined" : "Action to remove a defective medical device from the market."
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#Manufacturer",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://schema.org/Organization",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Manufacturer",
+      "undefined" : "Manufacturer"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.eudamed.eu/ontology#MAN-005",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Roche Diagnostics GmbH",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Global diagnostics division of Hoffmann-La Roche."
+      },
+      "labels" : {
+        "IRI-based" : "MAN-005",
+        "undefined" : "Roche Diagnostics"
+      }
+    }, {
+      "iri" : "http://www.eudamed.eu/ontology#MAN-001",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Medtronic plc",
+          "type" : "label"
+        } ]
+      },
+      "comment" : {
+        "undefined" : "Global manufacturer of medical devices headquartered in Ireland."
+      },
+      "labels" : {
+        "IRI-based" : "MAN-001",
+        "undefined" : "Medtronic plc"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The legal entity responsible for the design, manufacture, and regulatory compliance of the device."
+    },
+    "id" : "26"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#ImplantableDevice",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplantableDevice",
+      "undefined" : "Implantable Device"
+    },
+    "subClasses" : [ "22" ],
+    "comment" : {
+      "undefined" : "A medical device intended to be totally introduced into the human body."
+    },
+    "id" : "9",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#FSCA",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FSCA",
+      "undefined" : "FSCA"
+    },
+    "subClasses" : [ "11", "13", "1", "77" ],
+    "comment" : {
+      "undefined" : "A Field Safety Corrective Action taken by a manufacturer to reduce health risks."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#SoftwareRisk",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SoftwareRisk",
+      "undefined" : "Software Risk"
+    },
+    "comment" : {
+      "undefined" : "Risk arising from software bugs or faulty logic implementation."
+    },
+    "id" : "34",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#RadiationRisk",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RadiationRisk",
+      "undefined" : "Radiation Risk"
+    },
+    "comment" : {
+      "undefined" : "Risk associated with unintended ionising radiation exposure."
+    },
+    "id" : "35",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#ActiveDevice",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ActiveDevice",
+      "undefined" : "Active Device"
+    },
+    "subClasses" : [ "22" ],
+    "comment" : {
+      "undefined" : "A medical device relying on an electrical or other power source."
+    },
+    "id" : "5",
+    "superClasses" : [ "3" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#MaterialRisk",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MaterialRisk",
+      "undefined" : "Material Risk"
+    },
+    "comment" : {
+      "undefined" : "Risk related to material degradation, wear debris, or corrosion."
+    },
+    "id" : "36",
+    "superClasses" : [ "20" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#RiskClass",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RiskClass",
+      "undefined" : "Risk Class"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.eudamed.eu/ontology#ClassC",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "A high regulatory risk class under the IVDR framework."
+      },
+      "labels" : {
+        "IRI-based" : "ClassC",
+        "undefined" : "Class C"
+      }
+    }, {
+      "iri" : "http://www.eudamed.eu/ontology#ClassIII",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "The highest regulatory risk class under the MDR framework."
+      },
+      "labels" : {
+        "IRI-based" : "ClassIII",
+        "undefined" : "Class III"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The regulatory risk classification assigned to a medical device under MDR (I, IIa, IIb, III) or IVDR (A, B, C, D)."
+    },
+    "id" : "71"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#ImplantableActiveDevice",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ImplantableActiveDevice",
+      "undefined" : "Implantable Active Device"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.eudamed.eu/ontology#DEV-001",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "Left Ventricular Assist Device intended for end-stage heart failure."
+      },
+      "labels" : {
+        "IRI-based" : "DEV-001",
+        "undefined" : "HeartMate 3 LVAD"
+      }
+    } ],
+    "subClasses" : [ "21" ],
+    "comment" : {
+      "undefined" : "An active medical device that is also intended to be implanted."
+    },
+    "id" : "22",
+    "superClasses" : [ "5", "9" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#Incident",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Incident",
+      "undefined" : "Incident"
+    },
+    "subClasses" : [ "16", "60" ],
+    "comment" : {
+      "undefined" : "An adverse event or incident involving a registered medical device."
+    },
+    "id" : "17"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#Regulation",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Regulation",
+      "undefined" : "Regulation"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.eudamed.eu/ontology#MDR",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "Medical Device Regulation (EU 2017/745)."
+      },
+      "labels" : {
+        "IRI-based" : "MDR",
+        "undefined" : "MDR"
+      }
+    }, {
+      "iri" : "http://www.eudamed.eu/ontology#IVDR",
+      "baseIri" : "http://www.eudamed.eu/ontology",
+      "comment" : {
+        "undefined" : "In Vitro Diagnostic Regulation (EU 2017/746)."
+      },
+      "labels" : {
+        "IRI-based" : "IVDR",
+        "undefined" : "IVDR"
+      }
+    } ],
+    "comment" : {
+      "undefined" : "The overarching European regulatory framework governing the medical device."
+    },
+    "id" : "65"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#InSituCorrection",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InSituCorrection",
+      "undefined" : "In Situ Correction"
+    },
+    "comment" : {
+      "undefined" : "A corrective action involving the modification of a device directly in the field."
+    },
+    "id" : "77",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#InfectionRisk",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InfectionRisk",
+      "undefined" : "Infection Risk"
+    },
+    "comment" : {
+      "undefined" : "Risk related to biological contamination or device-related infections."
+    },
+    "id" : "30",
+    "superClasses" : [ "20" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:someValuesFrom"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "84",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "86",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "0"
+  }, {
+    "range" : "2",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#targetsDevice",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "targetsDevice",
+      "undefined" : "targets device"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "An inferred relationship connecting a Field Safety Corrective Action directly to the targeted medical device. Populated by SWRL rule."
+    },
+    "attributes" : [ "object" ],
+    "id" : "14"
+  }, {
+    "range" : "2",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "range" : "20",
+    "domain" : "19",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "18"
+  }, {
+    "range" : "20",
+    "domain" : "24",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#contactEmail",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "contactEmail",
+      "undefined" : "contact email"
+    },
+    "domain" : "26",
+    "comment" : {
+      "undefined" : "Official email address for regulatory communications with the manufacturer."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "25"
+  }, {
+    "range" : "9",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "28"
+  }, {
+    "range" : "20",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "20",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "range" : "20",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "range" : "20",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "40"
+  }, {
+    "range" : "20",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#eventDate",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "eventDate",
+      "undefined" : "event date"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "The calendar date when the adverse incident actually occurred."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "42"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#authorizationNumber",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "45",
+    "label" : {
+      "IRI-based" : "authorizationNumber",
+      "undefined" : "authorization number"
+    },
+    "domain" : "26",
+    "comment" : {
+      "undefined" : "EU regulatory authorization number issued to the manufacturer."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#isIVD",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "isIVD",
+      "undefined" : "is IVD"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "A boolean flag indicating whether the medical device is an In Vitro Diagnostic (IVD) device."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "46"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#hasAssociatedRisk",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasAssociatedRisk",
+      "undefined" : "has associated risk"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "Links a reported incident to the specific risk category or hazard that caused it."
+    },
+    "attributes" : [ "object" ],
+    "id" : "48"
+  }, {
+    "range" : "20",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "range" : "20",
+    "domain" : "31",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "50"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#fscaStatus",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "fscaStatus",
+      "undefined" : "FSCA status"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "The current operational status of the Field Safety Corrective Action: Open or Closed."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "51"
+  }, {
+    "range" : "20",
+    "domain" : "33",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "53"
+  }, {
+    "range" : "3",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "54"
+  }, {
+    "range" : "3",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#involvesDevice",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "3",
+    "label" : {
+      "IRI-based" : "involvesDevice",
+      "undefined" : "involves device"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "Links an adverse incident report to the specific medical device involved in the event."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#requiresManufacturerInvestigation",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "requiresManufacturerInvestigation",
+      "undefined" : "requires manufacturer investigation"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "An inferred relationship indicating that a specific manufacturer must investigate the linked incident. Populated by SWRL rule."
+    },
+    "attributes" : [ "object" ],
+    "id" : "57"
+  }, {
+    "range" : "3",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "58"
+  }, {
+    "range" : "3",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#closureDate",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "62",
+    "label" : {
+      "IRI-based" : "closureDate",
+      "undefined" : "closure date"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "The date when the corrective action was officially closed. Optional: absent for open FSCAs."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "61"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#compliesWith",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "65",
+    "label" : {
+      "IRI-based" : "compliesWith",
+      "undefined" : "complies with"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "Indicates the regulatory framework (MDR or IVDR) the device complies with."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "64"
+  }, {
+    "range" : "3",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "66"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#locatedIn",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "locatedIn",
+      "undefined" : "located in"
+    },
+    "domain" : "26",
+    "comment" : {
+      "undefined" : "Specifies the geographical country where the manufacturer's headquarters is located."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "67"
+  }, {
+    "range" : "3",
+    "domain" : "4",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#hasRiskClass",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "71",
+    "label" : {
+      "IRI-based" : "hasRiskClass",
+      "undefined" : "has risk class"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "Relates a medical device to its assigned regulatory risk class under MDR or IVDR."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "70"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#hasAssociatedRisk",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "20",
+    "label" : {
+      "IRI-based" : "hasAssociatedRisk",
+      "undefined" : "has associated risk"
+    },
+    "domain" : "16",
+    "comment" : {
+      "undefined" : "Links a reported incident to the specific risk category or hazard that caused it."
+    },
+    "attributes" : [ "someValues", "object" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#severity",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "73",
+    "label" : {
+      "IRI-based" : "severity",
+      "undefined" : "severity"
+    },
+    "domain" : "20",
+    "comment" : {
+      "undefined" : "The severity level of the associated risk: Critical, Serious, or Moderate."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#reportDate",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "72",
+    "label" : {
+      "IRI-based" : "reportDate",
+      "undefined" : "report date"
+    },
+    "domain" : "17",
+    "comment" : {
+      "undefined" : "The calendar date when the incident was officially reported to authorities."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#addressesIncident",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "addressesIncident",
+      "undefined" : "addresses incident"
+    },
+    "domain" : "2",
+    "comment" : {
+      "undefined" : "Links a Field Safety Corrective Action (FSCA) to the underlying incident it aims to resolve."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#deviceIdentifier",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "69",
+    "label" : {
+      "IRI-based" : "deviceIdentifier",
+      "undefined" : "device identifier"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "The unique internal alphanumeric identifier assigned to the medical device (e.g. DEV-001)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "79"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#hasManufacturer",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "26",
+    "label" : {
+      "IRI-based" : "hasManufacturer",
+      "undefined" : "has manufacturer"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "Relates a medical device to its unique manufacturer responsible for its regulatory compliance."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "80"
+  }, {
+    "iri" : "http://www.eudamed.eu/ontology#udiDi",
+    "baseIri" : "http://www.eudamed.eu/ontology",
+    "range" : "63",
+    "label" : {
+      "IRI-based" : "udiDi",
+      "undefined" : "UDI-DI"
+    },
+    "domain" : "3",
+    "comment" : {
+      "undefined" : "The Unique Device Identification - Device Identifier, a globally unique code for the device model."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "81"
+  }, {
+    "range" : "17",
+    "domain" : "60",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "82"
+  }, {
+    "range" : "5",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "83"
+  }, {
+    "range" : "2",
+    "domain" : "77",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "84"
+  }, {
+    "range" : "17",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "85"
+  }, {
+    "range" : "22",
+    "domain" : "21",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "86"
+  } ]
+}

@@ -1,0 +1,1046 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Manufacturer"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#hasManufacturer"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#involvesDevice"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#hasAssociatedRisk"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Risk"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Germany",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Germany"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Medtronic",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#MAN-001"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Republic_of_Ireland",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Ireland"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Roche",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#MAN-005"
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@value" : "Antonio Carrasco Hiruelo"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A comprehensive ontology representing high-risk medical devices, their manufacturers, associated risks, incident reports, and field safety corrective actions (FSCAs), based on the European MDR and IVDR regulatory frameworks."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "EUDAMED Medical Devices Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "1.0"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#ActiveDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A medical device relying on an electrical or other power source."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Active Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#ActiveImplant",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A highly specific category of active implantable medical devices."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Active Implant"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#ImplantableActiveDevice"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#ClassC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#RiskClass"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A high regulatory risk class under the IVDR framework."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Class C"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#ClassIII",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#RiskClass"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The highest regulatory risk class under the MDR framework."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Class III"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#ContaminationRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Risk related to chemical or biological contamination of reagents or components."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Contamination Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#Country",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A geographical country entity representing a sovereign state."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Country"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#CybersecurityRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Risk related to IT vulnerabilities and unauthorized access to device systems."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Cybersecurity Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#DEV-001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.eudamed.eu/ontology#compliesWith" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#MDR"
+  } ],
+  "http://www.eudamed.eu/ontology#deviceIdentifier" : [ {
+    "@value" : "DEV-001"
+  } ],
+  "http://www.eudamed.eu/ontology#hasManufacturer" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#MAN-001"
+  } ],
+  "http://www.eudamed.eu/ontology#hasRiskClass" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#ClassIII"
+  } ],
+  "http://www.eudamed.eu/ontology#isIVD" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "false"
+  } ],
+  "http://www.eudamed.eu/ontology#udiDi" : [ {
+    "@value" : "(01)00380740009095"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#ImplantableActiveDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Left Ventricular Assist Device intended for end-stage heart failure."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "HeartMate 3 LVAD"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#DEV-016",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.eudamed.eu/ontology#compliesWith" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#IVDR"
+  } ],
+  "http://www.eudamed.eu/ontology#deviceIdentifier" : [ {
+    "@value" : "DEV-016"
+  } ],
+  "http://www.eudamed.eu/ontology#hasManufacturer" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#MAN-005"
+  } ],
+  "http://www.eudamed.eu/ontology#hasRiskClass" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#ClassC"
+  } ],
+  "http://www.eudamed.eu/ontology#isIVD" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#boolean",
+    "@value" : "true"
+  } ],
+  "http://www.eudamed.eu/ontology#udiDi" : [ {
+    "@value" : "(01)04015630001016"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#InVitroDiagnosticDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Automated immunoassay analyzer for clinical laboratory diagnostics."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "cobas e 801"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#Device",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A generic medical device regulated under European MDR or IVDR frameworks."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid1"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#DiagnosticRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Risk of clinical diagnostic errors, such as false positives or false negatives."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Diagnostic Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#FSCA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A Field Safety Corrective Action taken by a manufacturer to reduce health risks."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "FSCA"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#FSCA-001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.eudamed.eu/ontology#addressesIncident" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#INC-001"
+  } ],
+  "http://www.eudamed.eu/ontology#fscaStatus" : [ {
+    "@value" : "Open"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#SafetyAlert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Safety alert issued regarding anticoagulation protocol update. Status Open: no closure date."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Safety Alert FSCA-001"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#FSCA-009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.eudamed.eu/ontology#addressesIncident" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#INC-011"
+  } ],
+  "http://www.eudamed.eu/ontology#closureDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-08-15"
+  } ],
+  "http://www.eudamed.eu/ontology#fscaStatus" : [ {
+    "@value" : "Closed"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#UserNotice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Customer field notification updating sample preparation protocol. Closed on 2024-08-15."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "User Notice FSCA-009"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#Germany",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Federal Republic of Germany, a European country."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Germany"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#HighRiskDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A medical device automatically classified as high risk by SWRL rule based on its regulatory class (Class III or Class D)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "High Risk Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#INC-001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.eudamed.eu/ontology#eventDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-01-15"
+  } ],
+  "http://www.eudamed.eu/ontology#hasAssociatedRisk" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#RSK-003"
+  } ],
+  "http://www.eudamed.eu/ontology#involvesDevice" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#DEV-001"
+  } ],
+  "http://www.eudamed.eu/ontology#reportDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-01-20"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#SeriousIncident"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Serious incident involving embolic stroke reported for HeartMate 3."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Stroke INC-001"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#INC-011",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.eudamed.eu/ontology#eventDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-06-03"
+  } ],
+  "http://www.eudamed.eu/ontology#hasAssociatedRisk" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#RSK-014"
+  } ],
+  "http://www.eudamed.eu/ontology#involvesDevice" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#DEV-016"
+  } ],
+  "http://www.eudamed.eu/ontology#reportDate" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2024-06-10"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#SeriousIncident"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Incident involving false positive TSH results due to biotin interference."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "False Positive INC-011"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#IVDR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Regulation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "In Vitro Diagnostic Regulation (EU 2017/746)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "IVDR"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#ImplantableActiveDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An active medical device that is also intended to be implanted."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Implantable Active Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#ActiveDevice"
+  }, {
+    "@id" : "http://www.eudamed.eu/ontology#ImplantableDevice"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#ImplantableDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A medical device intended to be totally introduced into the human body."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Implantable Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#InSituCorrection",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A corrective action involving the modification of a device directly in the field."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "In Situ Correction"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#FSCA"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#InVitroDiagnosticDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A medical device intended for in vitro diagnostic purposes (IVDR framework)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "IVD Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#Incident",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An adverse event or incident involving a registered medical device."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Incident"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid2"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#InfectionRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Risk related to biological contamination or device-related infections."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Infection Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#InjuryRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Risk category related to physical harm or injury caused directly to the patient."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Injury Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#InterferenceRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Risk of electromagnetic or other types of external interference."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Interference Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#Ireland",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Country"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Republic of Ireland, a European country."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Ireland"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#MAN-001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.eudamed.eu/ontology#authorizationNumber" : [ {
+    "@value" : "MAN-IE-2024-0001"
+  } ],
+  "http://www.eudamed.eu/ontology#contactEmail" : [ {
+    "@value" : "regulatory@medtronic.com"
+  } ],
+  "http://www.eudamed.eu/ontology#locatedIn" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Ireland"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Manufacturer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Global manufacturer of medical devices headquartered in Ireland."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Medtronic plc"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Medtronic plc"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#MAN-005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.eudamed.eu/ontology#authorizationNumber" : [ {
+    "@value" : "MAN-DE-2024-0005"
+  } ],
+  "http://www.eudamed.eu/ontology#contactEmail" : [ {
+    "@value" : "regulatory@roche.com"
+  } ],
+  "http://www.eudamed.eu/ontology#locatedIn" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Germany"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Manufacturer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Global diagnostics division of Hoffmann-La Roche."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Roche Diagnostics"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@value" : "Roche Diagnostics GmbH"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#MDR",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Regulation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Medical Device Regulation (EU 2017/745)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "MDR"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#MalfunctionRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Risk category related to device malfunction, including electrical and mechanical failures."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Malfunction Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#Manufacturer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The legal entity responsible for the design, manufacture, and regulatory compliance of the device."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Manufacturer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://schema.org/Organization"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#MaterialRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Risk related to material degradation, wear debris, or corrosion."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Material Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#NearMissIncident",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A potential incident that could have caused harm but was averted."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Near Miss"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Incident"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#RSK-003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.eudamed.eu/ontology#severity" : [ {
+    "@value" : "Critical"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#InjuryRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Risk of thrombus formation on the device surface causing embolic events."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Thrombosis Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#RSK-014",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.eudamed.eu/ontology#severity" : [ {
+    "@value" : "Serious"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#DiagnosticRisk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Diagnostic error risk involving false positive results."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "False Positive Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#RadiationRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Risk associated with unintended ionising radiation exposure."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Radiation Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#Recall",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Action to remove a defective medical device from the market."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Recall"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#FSCA"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#Regulation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The overarching European regulatory framework governing the medical device."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Regulation"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#Risk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A potential hazard or risk associated with the use of a medical device."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#RiskClass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The regulatory risk classification assigned to a medical device under MDR (I, IIa, IIb, III) or IVDR (A, B, C, D)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Risk Class"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#SafetyAlert",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A formal communication regarding the safe use of a medical device."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Safety Alert"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#FSCA"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#SelfTestDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A device intended by the manufacturer to be used by lay persons."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Self Test Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#SeriousIncident",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An incident leading to death or serious deterioration of a patient's health. Must have at least one associated risk."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Serious Incident"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Incident"
+  }, {
+    "@id" : "_:genid3"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#SingleUseDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A medical device intended to be used on one individual during a single procedure."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Single Use Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#SoftwareRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Risk arising from software bugs or faulty logic implementation."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Software Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#UserNotice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An official notice updating instructions for use or guidelines."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "User Notice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#FSCA"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#addressesIncident",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links a Field Safety Corrective Action (FSCA) to the underlying incident it aims to resolve."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#FSCA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "addresses incident"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Incident"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#authorizationNumber",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "EU regulatory authorization number issued to the manufacturer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Manufacturer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "authorization number"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#closureDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The date when the corrective action was officially closed. Optional: absent for open FSCAs."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#FSCA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "closure date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#compliesWith",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Indicates the regulatory framework (MDR or IVDR) the device complies with."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "complies with"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Regulation"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#contactEmail",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Official email address for regulatory communications with the manufacturer."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Manufacturer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "contact email"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#deviceIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The unique internal alphanumeric identifier assigned to the medical device (e.g. DEV-001)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "device identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#eventDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The calendar date when the adverse incident actually occurred."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Incident"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "event date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#fscaStatus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The current operational status of the Field Safety Corrective Action: Open or Closed."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#FSCA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "FSCA status"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#hasAssociatedRisk",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links a reported incident to the specific risk category or hazard that caused it."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Incident"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has associated risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Risk"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#hasManufacturer",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates a medical device to its unique manufacturer responsible for its regulatory compliance."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has manufacturer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Manufacturer"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#hasRiskClass",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Relates a medical device to its assigned regulatory risk class under MDR or IVDR."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has risk class"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#RiskClass"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#involvesDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Links an adverse incident report to the specific medical device involved in the event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Incident"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "involves device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#isIVD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A boolean flag indicating whether the medical device is an In Vitro Diagnostic (IVD) device."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "is IVD"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#boolean"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#locatedIn",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Specifies the geographical country where the manufacturer's headquarters is located."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Manufacturer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "located in"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Country"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#reportDate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The calendar date when the incident was officially reported to authorities."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Incident"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "report date"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#date"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#requiresManufacturerInvestigation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An inferred relationship indicating that a specific manufacturer must investigate the linked incident. Populated by SWRL rule."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Incident"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "requires manufacturer investigation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Manufacturer"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#severity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The severity level of the associated risk: Critical, Serious, or Moderate."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Risk"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "severity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#targetsDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "An inferred relationship connecting a Field Safety Corrective Action directly to the targeted medical device. Populated by SWRL rule."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#FSCA"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "targets device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ]
+}, {
+  "@id" : "http://www.eudamed.eu/ontology#udiDi",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The Unique Device Identification - Device Identifier, a globally unique code for the device model."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://www.eudamed.eu/ontology#Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "UDI-DI"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://xmlns.com/foaf/0.1/name",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+} ]
